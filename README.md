@@ -4,7 +4,7 @@
 
 # About
 
-My portfolio website that will include a bit about me and a few little JavaScript fun things!
+My portfolio website that will include a little bit about me and a few little JavaScript fun things!
 
 # Technologies 
 
