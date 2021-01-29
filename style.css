@@ -1,0 +1,360 @@
+ *{
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
+    
+ }
+
+ body i {
+    font-family:'FontAwesome'!important;
+    }
+
+ nav{
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     min-height: 8vh;
+     background-color: teal;
+     font-family: 'Roboto', sans-serif;
+     
+ }
+
+ .logo{
+     color: whitesmoke;
+     text-transform: uppercase;
+     letter-spacing: 5px;
+     font-size: 20px;
+ }
+
+ .nav-links{
+     display: flex;
+     justify-content: space-around;
+     width: 30%;
+ }
+
+ .nav-links li{
+     list-style: none;
+ }
+
+ .nav-links a{
+    color: whitesmoke;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 14px;
+ }
+
+ .nav-links a:hover{
+    color: rgb(209, 209, 209);
+ }
+
+ .burger{
+     display:none;
+ }
+
+ .burger div{
+     width: 25px;
+     height: 3px;
+     margin: 5px;
+     background-color: whitesmoke;
+     transition: all 0.3s ease;
+ }
+
+ @media screen and (max-width: 1024px){
+     .nav-links{
+         width: 30%;
+        
+     }
+ }
+
+ @media screen and (max-width: 768px){
+     body{
+         overflow-x: hidden;
+     }
+    .nav-links{
+   
+        position: fixed;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: teal;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        transform:translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+
+    }
+    to{
+
+        opacity: 1;
+        transform: translateX(0px);
+
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.sub-headings{
+    font-family: 'Roboto', sans-serif;
+    color: teal;
+    font-size: 30px;
+    text-align: center;
+    padding: 30px;
+}
+
+#return-button{
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 10px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: transparent; /* Set a background color */
+    color: rgb(109, 109, 109); /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 5px; /* Some padding */
+    font-size: 25px; /* Increase font size */
+}
+/* Home */
+
+.home{
+    display: flex;
+    height: 80vh;
+    color: black;
+    font-family: sans-serif;
+    margin-top: 10%;
+    margin-left: 20%;
+
+}
+
+
+.home .home-content .text-1{
+
+    font-size: 28px;
+    margin-bottom: 30px;
+    animation-name: text-1-animation; 
+    animation-duration: 2s;
+}
+
+.home .home-content .text-2{
+    color: teal;
+    font-size: 40px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+    animation-name: text-2-animation; 
+    animation-duration: 2s;
+    animation-delay: 2s;
+}
+.home .home-content .text-3{
+    font-size: 60px;
+    font-weight: 700;
+    margin-left: -100px;
+    margin-bottom: 30px;
+    animation-name: text-3-animation; 
+    animation-duration: 2s;
+    animation-delay: 4s;
+}
+.home .home-content .text-4{
+    font-size: 80px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    animation-name: text-3-animation; 
+    animation-duration: 2s;
+    animation-delay: 6s;
+
+}
+
+@keyframes text-1-animation{
+    0%{color: black;}
+    30% {color : green;}
+    100% {color: black;}
+}
+
+@keyframes text-2-animation{
+    
+    30% {color: rgb(34, 161, 34);}
+    100% {color: teal;}
+}
+
+@keyframes text-3-animation{
+    0%{color: black;}
+    30% {color: rgb(7, 224, 7);}
+    100% {color: black;}
+}
+
+@keyframes text-4-animation{
+    0%{color: black;}
+    30% {color: rgb(0, 255, 0);}
+    100% {color: black;}
+}
+
+.text-1:hover{
+
+    color: green;
+    transition: all .5s;
+
+}
+
+.text-2:hover{
+
+    color: rgb(34, 161, 34) !important;
+    transition: all .5s;
+
+}
+
+.text-3:hover{
+
+    color: rgb(7, 224, 7);
+    transition: all .5s;
+
+}
+
+.text-4:hover{
+
+    color: rgb(0, 255, 0);
+    transition: all .5s;
+
+}
+
+
+
+/* About */
+
+.about{
+    background-color: rgb(252, 252, 252);
+    height: 1200px;
+}
+
+.about-content{
+    
+    display: grid;
+    place-items: center;
+}
+
+.about-content .self-information{
+
+    padding: 300px;
+    
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto';
+    font-size: 15px;
+ 
+    
+}
+
+.self-introduction{
+    padding: 30px;
+    width: 35%;
+    background-color: rgb(53, 126, 43);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Projects */
+
+.projects{
+    height: 1200px;
+    background-color: white;
+}
+
+.projects-content{
+    padding: 400px
+}
+
+.project1-button{
+    border-radius: 12px;
+    padding:14px;
+    background-color: white;
+    
+}
+
+.project1-button:hover{
+
+    background-color: rgb(0, 255, 0);
+    transition: all .5s;
+
+}
+
+.project1-reset-button{
+    display: none;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+
+
+/* Footer */
+
+.footer{
+    width: 100%;
+    height: 100px;
+    display: block;
+    overflow: hidden;
+    padding: 30px 300px;
+    box-sizing: border-box;
+    background-color: grey;
+}
+
+.social-media{
+    
+    
+    
+}
+
+.social-media i{
+    
+    justify-content: space-around;
+    color: goldenrod;
+    font-size: 30px;
+
+    letter-spacing: 30px;
+    
+}
+
+.social-media a{
+    text-decoration: none;
+    float: right;
+    
+}
