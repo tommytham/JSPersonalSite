@@ -1,4 +1,4 @@
-# [tommytham.github.io](https://tommytham.github.io/)
+# My site ft. JavaScript
 
 *still need to implement a couple more small interactive fun things & make it mobile friendly*
 
